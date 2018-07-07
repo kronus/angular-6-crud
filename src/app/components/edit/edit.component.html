@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    {{ title }}
+  </div>
+  <div class="panel-body">
+      <div class="form-group">
+        <label class="col-md-4">Coin Name</label>
+        <input type="text" class="form-control name" #name value = "{{this.route.snapshot.params['name']}}"/>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Coin Price</label>
+        <input type="text" class="form-control value" #price value = "{{this.route.snapshot.params['price']}}" />
+      </div>
+      <div class="form-group">
+        <button (click)="updateCoin(this.route.snapshot.params['id'], name.value, price.value)" class="btn btn-primary">Update</button>
+      </div>
+  </div>
+</div>
