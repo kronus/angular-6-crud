@@ -8,11 +8,12 @@
   </thead>
 
   <tbody>
-  <tr *ngFor="let coin of coins">
+  <tr *ngFor="let coin of coins | paginate: { itemsPerPage: 10, currentPage: p }">
     <td>{{ coin.name }}</td>
     <td>{{ coin.price }}</td>
     <td><a [routerLink]="['/edit', coin.id, coin.name, coin.price]" class="btn btn-primary">Edit</a></td>
     <td><a [routerLink]="['/delete', coin.id]" class="btn btn-danger">Delete</a></td>
   </tr>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </tbody>
 </table>

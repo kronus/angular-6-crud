@@ -11,6 +11,7 @@ import { appRoutes } from './routerConfig';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CoinService } from './service/coin.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CoinService } from './service/coin.service';
     DeleteComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule
+    BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [CoinService],
   bootstrap: [AppComponent]

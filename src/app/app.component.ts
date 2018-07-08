@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Coins CRUD';
+  title = 'Coins CRUD - Create, Retrieve, Update and Delete';
 }
